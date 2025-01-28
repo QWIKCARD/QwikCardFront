@@ -1,0 +1,51 @@
+<div class="login-container">
+    <!-- Sección izquierda - Imagen y mensaje de bienvenida -->
+    <div class="left-section">
+      <div class="welcome-content">
+        <h1 class="fw-bold mb-0 txt-primary">Bienvenido a</h1>
+      <img width="50%" src="assets/qwik.png" alt="Qwik Logo">
+      
+        <p class="my-0 text-dark fw-bold">Tu plataforma de tarjetas virtuales profesionales</p>
+    
+      </div>
+    </div>
+
+    <!-- Sección derecha - Formulario de login -->
+    <div class="right-section">
+   
+      <div class="login-box">
+       <div class="text-center d-block d-sm-none">
+        <img width="80%" src="assets/qwik.png" alt="Qwik Logo">
+      
+       </div>
+        <div class="login-header">
+          <h3 class="text-dark">Iniciar Sesión</h3>
+          <p>Ingresa tus credenciales para continuar</p>
+        </div>
+        
+        <form [formGroup]="loginForm"  class="ui-form">
+        
+      <mat-form-field style="width: 100%;" class="example-full-width the-dense-zone" appearance="outline">
+        <mat-label>Correo</mat-label>
+        <input formControlName="username" type="text" matInput >
+
+      </mat-form-field>
+
+
+      <mat-form-field  style="width: 100%;" class="example-full-width the-dense-zone" appearance="outline">
+        <mat-label>Contraseña</mat-label>
+        <input formControlName="password" type="password" matInput    autocomplete="off" readonly onfocus="this.removeAttribute('readonly')">
+
+      </mat-form-field>
+
+          <div class="form-footer d-none">
+         
+            <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+          </div>
+          <button (click)="login()" [disabled]="loginForm.invalid" mat-flat-button color="primary" >Iniciar Sesión</button>
+       
+       
+        </form>
+      </div>
+    </div>
+  </div>

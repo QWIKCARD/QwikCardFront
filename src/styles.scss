@@ -1,1 +1,77 @@
 /* You can add global styles to this file, and also import other style files */
+@use './custom-theme' as *;
+
+$var-color-primary: #D80D1F; // Rojo intenso (Primario)
+$var-color-accent: #0DD89E;  // Verde menta (para botones secundarios, resaltados)
+$var-color-warn: #ff0707;    // Amarillo brillante (para advertencias)
+
+// Colores neutrales
+$var-color-background: #F5F5F5; // Fondo general
+$var-color-surface: #FFFFFF;    // Fondos de tarjetas o contenedores
+$var-color-border: #E0E0E0;     // Bordes suaves
+$var-color-text-primary: #212121; // Texto principal (oscuro)
+$var-color-text-secondary: #757575; // Texto secundario (gris medio)
+
+// Estados
+$var-color-success: #4CAF50;   // Verde éxito
+$var-color-error: #F44336;     // Rojo error
+$var-color-info: #2196F3;      // Azul informativo
+
+html, body { height: 100%;      overflow-x: hidden;}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;      overflow-x: hidden;}
+
+.txt-primary{
+    color: $var-color-primary;
+}
+
+.bg-principal{
+    background-color: $var-color-primary !important;
+}
+
+button {
+    width: 100%;
+    padding: 0.875rem;
+ 
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .hov-pointer{
+    cursor: pointer;
+  }
+
+
+  /** ESTILOS TOAST */
+  .colored-toast.swal2-icon-success {
+    color: #f3f3f3 !important;
+  }
+  
+
+  .swal2-icon-success {
+    color: #fff !important; /* Cambia el color del ícono de éxito */
+  }
+  
+  .swal2-icon-success {
+    color: #fff !important;    
+    background-color: #28a745 !important;        /* Cambia el color del icono de éxito */
+  }
+  
+  .swal2-icon-error {
+    color: #fff !important;      
+    background-color: #e02c3b !important;      /* Cambia el color del icono de error */
+  }
+  .swal2-icon-info {
+    color: #fff;     
+    background-color: #1b7fd1 !important;      /* Cambia el color del icono de error */
+  }
+  /* Cambiar el color de la barra de progreso del temporizador */
+  .swal2-icon-warning {
+    color: #fff !important;
+    background-color: #df8e25 !important; 
+  }
+  
