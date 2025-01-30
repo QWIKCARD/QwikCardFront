@@ -19,6 +19,8 @@ templateUrl:'./landing.component.html',
 export default class LandingComponent implements OnInit {
   private title = inject(Title);
   private meta = inject(Meta);
+  selectedRegion: 'latam' | 'spain' = 'latam';
+
   ngOnInit(): void {
     this.title.setTitle('QwikCard');
     this.meta.updateTag({name: 'description',content: 'Landing Page QwikCard',});
@@ -26,6 +28,6 @@ export default class LandingComponent implements OnInit {
     this.meta.updateTag({ name: 'og:title', content: 'QwikCard' });
     this.meta.updateTag({ name: 'keywords', content: 'Tarjetas virtuales, tarjetas de presentación' });
     this.meta.updateTag({ name: 'og:image', content: 'https://qwikcard.netlify.app/assets/qwik.png' });
-  
+
   }
  }

@@ -16,7 +16,7 @@
     .logo {
       font-size: 2.3rem;
       font-weight: 700;
- 
+
     }
     .nav-links {
       display: flex;
@@ -33,7 +33,7 @@
         display: none;
       }
     }
-  
+
 
 
     .hero {
@@ -206,4 +206,25 @@
       padding: 0.5rem 0;
       text-align: center;
       color: var(--secondary);
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .tab-button {
+      padding: 0.5rem 2rem;
+      border: none;
+      background: none;
+      cursor: pointer;
+      font-size: 1.1rem;
+      border-bottom: 2px solid transparent;
+    }
+
+    .tab-button.active {
+      border-bottom: 2px solid #dc3545;
+      color: #dc3545;
     }
